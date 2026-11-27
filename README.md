@@ -676,27 +676,22 @@ El procedimiento comprende:
 La función `respiratorio(R1, R3, C2)` permite construir el modelo de tercer orden a partir de los parámetros eléctricos:
 
 ```python
-def respiratorio(R1, R3, C2):
-    L, C1, R2 = 10E-6, 1E-6, 100
-    num = [R2*C2, 1]
-    a = L*C1*R2*C2
-    b = L*(C1 + C2) + R2*C2*(L/R3 + R1*C1)
-    c = L/R3 + R1*(C1 + C2) + R2*C2*(1 + R1/R3)
-    d = 1 + R1/R3
-    den = [a, b, c, d]
-    sys = ctrl.tf(num, den)
-    polos = np.roots(den)
-    return sys, polos
+def respiratorio(L,R1,C1,R3,R2,C2):
+    num = [R2*C2,1]
+    den = [L*R2*C1*C2,R1*R2*C1*C2+L*(C1+(1+R2/R3)*C2),R1*C1+(R1*R2/R3+R1+R2)*C2+L/R3,1+R1/R3]
+    sys = ctrl.tf(num,den)
+    L = np.roots(den)
+    return sys,L
 ```
 
 Las condiciones se definen mediante:
 
 ```python
 # Función de transferencia de control (sano)
-sysControl, polosControl = respiratorio(10, 1000, 1E-6)
+sysctrl, L = respiratorio(L,R1,C1,R3,R2,C2)
 
 # Función de transferencia de caso (asma)
-sysCaso, polosCaso = respiratorio(30, 100, 0.1E-6)
+syscaso, L = respiratorio(L,R1,C1,R3,R2,C2)
 ```
 
 Las respuestas se obtienen mediante `forced_response`, utilizando condiciones iniciales nulas y el tren de pulsos rectangulares como excitación.
@@ -706,16 +701,15 @@ Las respuestas se obtienen mediante `forced_response`, utilizando condiciones in
 El controlador se construye considerando las ganancias sintonizadas en Simulink:
 
 ```python
-numPID = [kP + kD*Nf, kP*Nf + kI, kI*Nf]
-denPID = [1, Nf, 0]
-PID = ctrl.tf(numPID, denPID)
+numPID = [kP+kD*Nf,kP*Nf+kI,kI*Nf]
+denPID = [1,Nf,0]
+PID = ctrl.tf(numPID,denPID)
 ```
 
 Posteriormente, se construye el sistema controlado mediante retroalimentación negativa:
 
 ```python
-sysPID = ctrl.feedback(ctrl.series(PID, sysCaso), 1, sign=-1)
-_, VsPID = ctrl.forced_response(sysPID, t, VsControl, x0)
+sysPID = ctrl.feedback(ctrl.series(PID,sys),1,sign=-1)
 ```
 
 El error de seguimiento se determina mediante:
