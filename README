@@ -154,7 +154,7 @@ La analogía es de carácter fenomenológico y sus parámetros eléctricos fuero
 
 El diagrama elaborado mediante BioRender relaciona las vías aéreas centrales, los alvéolos, la broncoconstricción asmática y la distensibilidad pulmonar con cada componente del circuito eléctrico equivalente.
 
-![Modelo biológico del sistema respiratorio](PF_Biorender.png)
+![Modelo biológico del sistema endócrino](Biorender.png)
 
 **Figura 1.** Representación anatómica y fisiopatológica del sistema respiratorio (control sano vs. caso asma) y su correspondencia con el circuito eléctrico de tercer orden. Elaboración mediante BioRender.
 
@@ -257,7 +257,7 @@ H_{\mathrm{caso}}(s) =
 
 La modificación simultánea de $R_1$, $R_3$ y $C_2$ produce diferencias en la ganancia estática, la ubicación de los polos y el cero finito, modificando la amplitud y la dinámica transitoria de ambos modelos.
 
-### 4. Representación mediante ecuaciones diferenciales de primer orden
+### 4. Representación mediante ecuaciones diferenciales de tercer orden
 
 Definiendo las variables de estado $x_1(t) = i_e(t)$, $x_2(t) = V_s(t)$ y $x_3(t) = v_{C2}(t)$, el sistema de tercer orden se expresa mediante tres ecuaciones diferenciales ordinarias acopladas:
 
@@ -978,18 +978,17 @@ La organización de los archivos permite documentar el desarrollo matemático, l
 .
 ├── README.md                         # Reporte y documentación
 ├── CITATION.cff                      # Datos de citación del repositorio
-├── PF_Apuntes.pdf                    # Desarrollo matemático a mano
-├── PF_Reporte.pdf                    # Reporte técnico formal en LaTeX
-├── PF_Gutierrez23212734.mlx          # Cuaderno computacional MATLAB
-├── PF_Gutierrez23212734.pdf          # Exportación del cuaderno MATLAB
-├── sistema_asma.slx                  # Modelo Simulink/Simscape
-├── PF_Gutierrez23212734.py           # Implementación en Python
-├── Asma_matlab.pdf                   # Respuestas obtenidas en MATLAB
-├── Asma_python.pdf                   # Respuestas obtenidas en Python
-├── PF_Biorender.png                  # Diagrama fisiológico (Sano vs. Asma)
-├── PF_PID.png                        # Evidencia de sintonización PID
-├── PF_Circuito.jpeg                  # Evidencia del circuito
-└── PF_Lab.bmp                        # Evidencia experimental
+├── Procedimiento Algebraico.pdf      # Desarrollo matemático a mano
+├── Proyecto Bitacora 00.pdf          # Reporte técnico formal en LaTeX
+├── Proyecto_asma.mlx                 # Cuaderno computacional MATLAB
+├── Proyecto_asma.pdf                 # Exportación del cuaderno MATLAB
+├── Sistema1.slx                      # Modelo Simulink/Simscape
+├── Proyecto_asma.py                  # Implementación en Python
+├── Caso_matlab.pdf                   # Respuestas obtenidas en MATLAB
+├── Caso_python.pdf                   # Respuestas obtenidas en Python
+├── Biorender.png                     # Diagrama fisiológico (Sano vs. Asma)
+├── PID.png                           # Evidencia de sintonización PID
+
 ```
 
 **Criterio de nombres:** los archivos de MATLAB, Simulink, Python y las figuras conservan las denominaciones utilizadas durante el proyecto final. La evidencia experimental se documenta mediante un archivo `.bmp` del osciloscopio, mientras que la imagen `PF_PID.png` contiene la evidencia de sintonización del controlador.
