@@ -991,7 +991,7 @@ La organización de los archivos permite documentar el desarrollo matemático, l
 
 ```
 
-**Criterio de nombres:** los archivos de MATLAB, Simulink, Python y las figuras conservan las denominaciones utilizadas durante el proyecto final. La evidencia experimental se documenta mediante un archivo `.bmp` del osciloscopio, mientras que la imagen `PF_PID.png` contiene la evidencia de sintonización del controlador.
+**Criterio de nombres:** los archivos de MATLAB, Simulink, Python y las figuras conservan las denominaciones utilizadas durante el proyecto final. La imagen `PID.png` contiene la evidencia de sintonización del controlador.
 
 [Volver al contenido](#contenido)
 
