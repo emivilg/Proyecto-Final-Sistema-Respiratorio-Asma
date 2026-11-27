@@ -406,8 +406,8 @@ Ambas condiciones presentan tres polos reales y negativos, por lo que sus modelo
 
 | Característica | Control (sano) | Caso (asma) |
 |---|---:|---:|
-| Ganancia estática $H(0)$ | $0.990099$ | $0.769231$ |
-| Error estacionario $e_{ss}$ | $0.009901$ | $0.230769$ |
+| Ganancia estática $H(0)$ | 0.990099 | 0.769231 |
+| Error estacionario $e_{ss}$ | 0.009901 | 0.230769 |
 | Polo real ($\lambda_1$) | -9028.02 | -37704.97 |
 | Polos reales ($\lambda_{2,3}$) | -126317.81, -885654.17 | -116242.78, -2966052.25 |
 | Cero finito ($s_z = -1/R_2 C_2$) | -10000 | -100000 |
