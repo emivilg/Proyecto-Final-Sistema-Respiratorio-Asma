@@ -1,0 +1,36 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: 'Proyecto final: Sistema respiratorio '
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Emiliano
+    family-names: Villalobos
+    email: L23212243@tijuana.tecnm.mx
+    affiliation: TecNM / IT Tijuana
+  - given-names: Sara
+    family-names: Gutiérrez
+    email: L23212734@tijuana.tecnm.mx
+    affiliation: TecnNM / IT Tijuana
+repository-code: >-
+  https://github.com/emivilg/Proyecto-Final-Sistema-Respiratorio-Asma
+keywords:
+  - mecánica ventilatoria
+  - asma
+  - modelo compartimental
+  - circuito RLC de tercer orden
+  - compilancia pulmonar
+  - controlador PID
+  - MATLAB
+  - Simulink
+  - Simscape Electrical
+  - Python
+  - simulación in silico
+  - instrumentación electrónica
+license: BSD-2-Clause
+version: '1.0'
+date-released: '2026-11-26'
