@@ -12,7 +12,7 @@ El caso de estudio representa el **sistema respiratorio (mecánica ventilatoria)
 **Asignatura:** Modelado de Sistemas Fisiológicos  
 **Programa:** Ingeniería Biomédica  
 **Estudiantes:** Sara Gutiérrez Hernández · 23212734 · l23212734@tectijuana.edu.mx
-                 Emiliano Villalobos Garcia · 232122434 · l23212243@tectijuana.edu.mx
+                · Emiliano Villalobos Garcia · 232122434 · l23212243@tectijuana.edu.mx
 
 **Repositorio de la asignatura:** https://github.com/DrPaulValle/MSF-IBF1020  
 **Sede:** Blvd. Alberto Limón Padilla s/n, Tijuana, C. P. 22454, B. C., México.
